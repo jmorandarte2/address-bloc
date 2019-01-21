@@ -9,7 +9,8 @@ const inquirer = require('inquirer');
           message: "Please choose from an option below: ",
           choices: [
             "Add new contact",
-            "Exit"
+            "Exit",
+            "Time and Date"
           ]
         }
       ];
@@ -25,6 +26,10 @@ const inquirer = require('inquirer');
           break;
         case "Exit":
           this.exit();
+          break;
+        case "Time and Date":
+          this.getDate();
+          break;
         default:
           console.log("Invalid input");
           this.main();
@@ -48,6 +53,10 @@ const inquirer = require('inquirer');
   exit(){
     console.log("Thanks for using AddressBloc!");
     process.exit();
+  }
+
+  getDate(){
+    console.log(Date());
   }
 
  }
