@@ -55,8 +55,16 @@ const inquirer = require('inquirer');
     process.exit();
   }
 
+  getContactCount(){
+    return this.contacts.length;
+  }
+
   getDate(){
     console.log(Date());
+  }
+
+  remindMe(){
+    return "Learning is a life-long pursuit";
   }
 
  }
