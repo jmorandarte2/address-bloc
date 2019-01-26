@@ -28,7 +28,7 @@ const ContactController = require("./ContactController");
         case "Exit":
           this.exit();
           break;
-        case "tTime and Date":
+        case "Time and Date":
           this.getDate();
           break;
         default:
@@ -48,7 +48,7 @@ const ContactController = require("./ContactController");
   addContact(){
     this.clear();
     inquirer.prompt(this.book.addContactQuestions).then((answers) => {
-      this.book.addContact(answers.name, answers.phone).then((contact) => {
+      this.book.addContact(answers.name, answers.phone, answers.Email).then((contact) => {
         console.log("Contact added successfully!");
         this.main();
       }).catch((err) => {
